@@ -182,22 +182,38 @@ namespace Briscola
                     if(C2.Seme != CardBriscola.Seme)
                         return true;
 
+                if (semeTemp == C2.Seme && C1.Valore > C2.Valore)
+                    return true;
+
                 if (C1.Valore == C2.Valore)
                     return true;
 
                 if (C1.Valore > C2.Valore)
                     return true;
-            }
+            } else {
 
-            if (!GiocaGiocatore)
-            {
-                if (C2.Seme != semeTemp)
-                    if (C2.Seme != CardBriscola.Seme)
+                if (C1.Seme != semeTemp)
+                {
+                    if (C1.Seme != CardBriscola.Seme)
                         return false;
-                if (C1.Valore == C2.Valore)
+                    else
+                        return true;
+                }
+
+                if (semeTemp == C1.Seme && C2.Valore > C1.Valore)
                     return false;
-                if (C1.Valore > C2.Valore)
+                else
+                    return true;
+
+                if (C2.Valore == C1.Valore)
                     return false;
+                else
+                    return true;
+
+                if (C2.Valore > C1.Valore)
+                    return false;
+                else
+                    return true;
             }
             return false;
         }

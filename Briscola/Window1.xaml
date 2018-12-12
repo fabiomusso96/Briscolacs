@@ -1,0 +1,19 @@
+﻿<Window x:Class="Briscola.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Briscola"
+        mc:Ignorable="d"
+        Title="Benvenuto!" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Height="250" Margin="10,10,9.6,10.4" Width="274">
+            
+            <Label Content=" Benvenuto nella briscola!" Foreground="#FF008DD6" HorizontalAlignment="Center" Margin="15" FontSize="16" />
+            <Label Content="Inserisci il tuo nome:" Margin="10,0,10,0"/>
+            <TextBox Text="Giocatore1" Margin="10,0" Name="txtNome" FontSize="18" />
+            <ComboBox Name="cmb" Margin="10" />
+            <Button Content="Inizia Partita" Margin="10,30,10,10" Click="Button_Click" Height="44"/>
+        </StackPanel>
+    </Grid>
+</Window>
